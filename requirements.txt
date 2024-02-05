@@ -2,3 +2,6 @@ llama_index
 html2text
 BeautifulSoup4
 requests
+pinecone-client
+llama-index
+openai
