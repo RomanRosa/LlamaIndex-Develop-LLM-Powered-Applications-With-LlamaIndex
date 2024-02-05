@@ -5,3 +5,4 @@ requests
 pinecone-client
 llama-index
 openai
+unstructured
