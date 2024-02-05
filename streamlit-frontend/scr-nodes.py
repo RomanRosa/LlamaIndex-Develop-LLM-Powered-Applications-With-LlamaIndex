@@ -67,10 +67,10 @@ if st.session_state.messages[-1]["role"] != "assistant":
         with st.spinner("Thinking..."):
             response = st.session_state.chat_engine.chat(message=prompt)
             st.write(response.response)
-            nodes= [node for node in response.source_nodes]
-            for col, node, i in zip(st.columns(len(nodes)), nodes, range(len(nodes))):
-                with col:
-                    st.header(f"Source Node: score={node.score}")
-                    st.write(node.text)
+            nodes= [node for node in response.source_nodes] #Citations & Listening Source Nodes
+            for col, node, i in zip(st.columns(len(nodes)), nodes, range(len(nodes))): #Citations & Listening Source Nodes
+                with col: #Citations & Listening Source Nodes
+                    st.header(f"Source Node: score={node.score}") #Citations & Listening Source Nodes
+                    st.write(node.text) #Citations & Listening Source Nodes
                 message = {"role": "assistant", "content": response.response}
                 st.session_state.messages.append(message)
